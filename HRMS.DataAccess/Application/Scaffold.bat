@@ -1,0 +1,2 @@
+﻿//scaffold db context powershell command
+dotnet ef dbcontext scaffold "server=localhost;user=sa;password=p4s5w0rd;database=HRMS;TrustServerCertificate=True" "Microsoft.EntityFrameworkCore.SqlServer" -t hr_Department -t hr_Employee -t hr_JobHistory -t hr_Location -t hr_Role -f -o Application -c ApplicationContext

@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "server=localhost;user=sa;password=p4s5w0rd;database=HRMS;TrustServerCertificate=True"
+  }
+}

@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Scripts\01.Create Table Employee.sql" />
+    <None Remove="Scripts\02.Create Table Location.sql" />
+    <None Remove="Scripts\03.Create Table Department.sql" />
+    <None Remove="Scripts\04.Create Table Role.sql" />
+    <None Remove="Scripts\05.Create Table Job History.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\01.Create Table Employee.sql" />
+    <EmbeddedResource Include="Scripts\02.Create Table Location.sql" />
+    <EmbeddedResource Include="Scripts\03.Create Table Department.sql" />
+    <EmbeddedResource Include="Scripts\04.Create Table Role.sql" />
+    <EmbeddedResource Include="Scripts\05.Create Table Job History.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup-core" Version="6.0.4" />
+    <PackageReference Include="dbup-sqlserver" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dbup.appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
